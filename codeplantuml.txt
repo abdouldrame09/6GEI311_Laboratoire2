@@ -1,0 +1,134 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam shadowing false
+skinparam defaultFontName Arial
+
+title Diagramme de Classes - Système de Gestion de Tickets
+
+' --- CLASSE USER & DEVELOPPEUR ---
+class User {
+    + userId : int
+    + name : str
+    + email : str
+    + tickets : list
+    __
+    + __init__(name: str, email: str)
+    + createTicket(ticket: Ticket) : void
+    + viewTicket(ticket: Ticket) : void
+    + updateTicket(ticket: Ticket) : void
+}
+
+class Developpeur {
+    __
+    + __init__(name: str, email: str)
+    + assignTicket(ticket: Ticket, user: User) : void
+    + validateTicket(ticket: Ticket) : void
+    + closeTicket(ticket: Ticket) : void
+    + viewAllTickets(gestionnaire: GestionnaireTickets) : list
+}
+
+User <|-- Developpeur : hérite de
+
+' --- CLASSE TICKET ---
+class Ticket {
+    + ticketId : int
+    + title : str
+    + status : Statut
+    + priority : Priorite
+    + creationDate : datetime
+    + updateDate : datetime
+    + descriptions : list
+    + createdBy : User
+    + assignedTo : User
+    __
+    + __init__(title: str, status: Statut = Statut.OUVERT, priority: Priorite = Priorite.NORMALE)
+    + assignTo(user: User) : void
+    + updateStatus(status: Statut) : void
+    + updateInfo(title: str = None, priority: Priorite = None) : void
+    + addDescription(description: DescriptionTicket) : void
+    + loadDescriptions() : void
+}
+
+' --- HIERARCHIE DES DESCRIPTIONS ---
+abstract class DescriptionTicket {
+    + chemin : str
+    __
+    + __init__(chemin: str)
+    + getChemin() : str
+    + {abstract} load() : str
+    + __str__() : str
+}
+
+class TextObject {
+    __
+    + load() : str
+}
+
+class ImageObject {
+    __
+    + load() : str
+}
+
+class VideoObject {
+    __
+    + load() : str
+}
+
+DescriptionTicket <|-- TextObject
+DescriptionTicket <|-- ImageObject
+DescriptionTicket <|-- VideoObject
+
+' --- FACTORY PATTERN ---
+class DescriptionFactory {
+    __
+    + {static} createDescription(typeDescription: TypeDescription, chemin: str) : DescriptionTicket
+}
+
+DescriptionFactory ..> DescriptionTicket : "crée"
+DescriptionFactory ..> TextObject : "instancie"
+DescriptionFactory ..> ImageObject : "instancie"
+DescriptionFactory ..> VideoObject : "instancie"
+
+' --- GESTIONNAIRE (Fabrication pure) ---
+class GestionnaireTickets {
+    - tickets : list
+    __
+    + ajouter(ticket: Ticket) : void
+    + trouverParId(id: int) : Ticket
+    + tous() : list
+}
+
+' --- ENUMERATIONS ---
+enum Statut {
+    OUVERT
+    ASSIGNÉ
+    VALIDATION
+    TERMINÉ
+}
+
+enum Priorite {
+    BASSE
+    NORMALE
+    HAUTE
+}
+
+enum TypeDescription {
+    IMAGE
+    VIDEO
+    TEXTE
+}
+
+' --- RELATIONS ENTRE ENTITÉS ---
+Ticket "1" *-- "0..*" DescriptionTicket : "contient"
+Ticket "0..*" o-- "0..1" User : "est assigné à"
+Ticket "0..*" o-- "1" User : "créé par"
+User "1" o-- "0..*" Ticket : "possède"
+Developpeur ..> Ticket : "gère"
+Developpeur ..> GestionnaireTickets : "utilise"
+GestionnaireTickets "1" o-- "0..*" Ticket : "gère"
+
+Ticket ..> Statut
+Ticket ..> Priorite
+DescriptionFactory ..> TypeDescription
+@enduml
