@@ -4,7 +4,6 @@
 
 Ce dépôt contient le travail du Lab 2 pour le cours 6GEI311 – Architecture des logiciels.
 
----
 
 ## 1. Installation et utilisation
 
@@ -31,7 +30,7 @@ Contenu du dépôt :
 - codeplantuml.txt : code PlantUML
 - Rapport lab2.pdf : rapport complet
 
----
+
 
 ## 2. Ce que j'ai appris
 
@@ -47,23 +46,22 @@ J'ai appliqué les principes **GRASP** :
 
 J'ai aussi appris à utiliser le **polymorphisme** pour gérer plusieurs types de descriptions (texte, image, vidéo) de manière uniforme.
 
----
+
 
 ## 3. Résultats
 
 ### Fonctionnalités
 
-Fonctionnalité 
-
-Création de tickets (texte, image, vidéo) 
-Affichage des tickets et descriptions 
-Assignation à un développeur 
-Validation et fermeture 
-Vérification des entrées 
+- **Création de tickets (texte, image, vidéo)**
+- **Affichage des tickets et descriptions** 
+- **Assignation à un développeur**
+- **Validation et fermeture**
+- **Vérification des entrées**
 
 ### Diagramme UML — Partie 1
 
 Diagramme initial avec plusieurs problèmes : classe Admin incohérente, god class Ticket, méthodes vides, types inadaptés.
+
 
 ### Diagramme UML — Partie 2
 
