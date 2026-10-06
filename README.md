@@ -11,7 +11,7 @@ Ce dépôt contient le travail du Lab 2 pour le cours 6GEI311 – Architecture d
 
 Il faut juste **Python 3.8 ou plus récent**.
 
-git clone [https://github.com/abdouldrame09/6GEI311-Lab2-SOL.git](https://github.com/abdouldrame09/6GEI311_Laboratoire2.git)
+git clone [https://github.com/abdouldrame09/6GEI311_Laboratoire2.git]
 cd 6GEI311_Laboratoire2
 
 ### Utilisation
@@ -35,33 +35,42 @@ Contenu du dépôt :
 
 ## 2. Ce que j'ai appris
 
-Ce lab m'a permis de comprendre l'importance de bien analyser l'énoncé avant de concevoir un diagramme.
+Ce laboratoire m'a permis d'apprendre plusieurs choses importantes.
 
-J'ai appliqué les principes **GRASP** :
+D'abord, j'ai compris qu'il faut toujours bien lire l'énoncé avant de concevoir un diagramme. Plusieurs problèmes du diagramme initial venaient du fait qu'il ne respectait pas le texte.
+
+Ensuite, j'ai découvert les principes GRASP :
 - **Expert en information** : placer chaque responsabilité dans la bonne classe.
-- **Fabrication pure** : créer des classes utilitaires (DescriptionFactory, GestionnaireTickets).
+- **Fabrication pure** : créer des classes utilitaires comme Factory et Gestionnaire.
 - **Faible couplage** : éviter les dépendances directes entre classes.
 - **Protégé des variations** : utiliser des énumérations et le polymorphisme.
 - **Forte cohésion** : une classe = une responsabilité claire.
 
-J'ai aussi appris à utiliser le **polymorphisme** pour gérer plusieurs types de descriptions (texte, image, vidéo) de manière uniforme.
-
-
+J'ai aussi appris à utiliser le polymorphisme pour gérer plusieurs types de descriptions (texte, image, vidéo) de manière uniforme, sans avoir à modifier le reste du code.
+Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon diagramme donne un bon code.
 
 ## 3. Résultats
 
 ### Fonctionnalités
 
-- **Création de tickets (texte, image, vidéo)**
-- **Affichage des tickets et descriptions** 
-- **Assignation à un développeur**
-- **Validation et fermeture**
-- **Vérification des entrées**
+**Menu principal**
+![Menu principal](captures/menu_principal.png)
+
+**Création d'un ticket**
+![Création ticket](captures/creation_ticket.png)
+
+**Affichage des tickets**
+![Voir tickets](captures/voir_tickets.png)
+
+**Assignation d'un ticket**
+![Assignation](captures/assignation.png)
+
 
 ### Diagramme UML — Partie 1
 
 Diagramme initial avec plusieurs problèmes : classe Admin incohérente, god class Ticket, méthodes vides, types inadaptés.
 
+![Diagramme initial](diagramme_partie1.png)
 
 ### Diagramme UML — Partie 2
 
@@ -72,7 +81,9 @@ Diagramme final avec :
 - GestionnaireTickets
 - Enums Statut, Priorite, TypeDescription
 
-Voir DiagrammeUML.png et codeplantuml.txt.
+Voir DiagrammeUML.png et codeplantuml.txt
+
+![DiagrammeUML](DiagrammeUML.png)
 
 ### Captures d'écran
 
@@ -80,7 +91,6 @@ Voir DiagrammeUML.png et codeplantuml.txt.
 ![Création ticket](captures/creation_ticket.png)
 ![Voir tickets](captures/voir_tickets.png)
 ![Assignation](captures/assignation.png)
-
 
 
 ## Auteur
