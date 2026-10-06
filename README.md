@@ -58,7 +58,7 @@ Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon
 ![Menu principal](captures/menu_principal.png)
 
 ## 2. Connexion Utilisateur
-![connexion Utilisateur](captures/connexion_utilisateur.png)
+![connexion Utilisateur](captures/menu_utilisateur.png)
 
 
 ## 3. Création d'un ticket
@@ -67,12 +67,12 @@ Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon
 
 ## 4. Affichage d'un ticket avec ses descriptions
 
-![afficher Ticket](captures/voir_ticket.png)
+![afficher Ticket](captures/voir_tickets.png)
 
 
 ## 5. Connexion Développeur
 
-![connexion Developpeur](captures/connexion_developpeur.png)
+![connexion Developpeur](captures/menu_developpeur.png)
 
 
 ## 6. Voir tous les tickets
@@ -86,12 +86,12 @@ Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon
 
 ## 8. Valider un ticket
 
-![valider ticket](captures/validation.png)
+![valider ticket](captures/valide_ticket)
 
 
 ## 9. Fermer un ticket
 
-![fermer ticket](captures/fermeture.png)
+![fermer ticket](captures/ferme_ticket.png)
 
 
 ### Diagramme UML — Partie 1
