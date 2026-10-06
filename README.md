@@ -86,7 +86,7 @@ Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon
 
 ## 8. Valider un ticket
 
-![valider ticket](captures/valide_ticket)
+![valider ticket](captures/valide_ticket.png)
 
 
 ## 9. Fermer un ticket
