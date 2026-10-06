@@ -53,17 +53,45 @@ Enfin, j'ai compris que la conception et le code doivent aller ensemble : un bon
 
 ### Fonctionnalités
 
-**Menu principal**
+## 1. Menu principal
+
 ![Menu principal](captures/menu_principal.png)
 
-**Création d'un ticket**
-![Création ticket](captures/creation_ticket.png)
+## 2. Connexion Utilisateur
+![connexion Utilisateur](captures/connexion_utilisateur.png)
 
-**Affichage des tickets**
-![Voir tickets](captures/voir_tickets.png)
 
-**Assignation d'un ticket**
-![Assignation](captures/assignation.png)
+## 3. Création d'un ticket
+
+![création Ticket](captures/creation_ticket.png)
+
+## 4. Affichage d'un ticket avec ses descriptions
+
+![afficher Ticket](captures/voir_ticket.png)
+
+
+## 5. Connexion Développeur
+
+![connexion Developpeur](captures/connexion_developpeur.png)
+
+
+## 6. Voir tous les tickets
+
+![voir tous les tickets](captures/voir_tous_tickets.png)
+
+
+## 7. Assigner un ticket à un développeur
+
+![Assigner ticket](captures/assignation.png)
+
+## 8. Valider un ticket
+
+![valider ticket](captures/validation.png)
+
+
+## 9. Fermer un ticket
+
+![fermer ticket](captures/fermeture.png)
 
 
 ### Diagramme UML — Partie 1
@@ -84,13 +112,6 @@ Diagramme final avec :
 Voir DiagrammeUML.png et codeplantuml.txt
 
 ![DiagrammeUML](DiagrammeUML.png)
-
-### Captures d'écran
-
-![Menu principal](captures/menu_principal.png)
-![Création ticket](captures/creation_ticket.png)
-![Voir tickets](captures/voir_tickets.png)
-![Assignation](captures/assignation.png)
 
 
 ## Auteur
